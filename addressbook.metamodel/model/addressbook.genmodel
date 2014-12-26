@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<genmodel:GenModel xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI" xmlns:ecore="http://www.eclipse.org/emf/2002/Ecore"
+    xmlns:genmodel="http://www.eclipse.org/emf/2002/GenModel" modelDirectory="/addressbook.metamodel/src"
+    modelPluginID="addressbook.metamodel" modelName="Addressbook" importerID="org.eclipse.emf.importer.ecore"
+    copyrightFields="false">
+  <foreignModel>addressbook.ecore</foreignModel>
+  <genPackages prefix="Addressbook" disposableProviderFactory="true" ecorePackage="addressbook.ecore#/">
+    <genEnums typeSafeEnumCompatible="false" ecoreEnum="addressbook.ecore#//CONTACT_TYPE_ENUM">
+      <genEnumLiterals ecoreEnumLiteral="addressbook.ecore#//CONTACT_TYPE_ENUM/FRIENDS"/>
+      <genEnumLiterals ecoreEnumLiteral="addressbook.ecore#//CONTACT_TYPE_ENUM/RELATIVE"/>
+      <genEnumLiterals ecoreEnumLiteral="addressbook.ecore#//CONTACT_TYPE_ENUM/OFFICIAL"/>
+    </genEnums>
+    <genDataTypes ecoreDataType="addressbook.ecore#//StringArray"/>
+    <genDataTypes ecoreDataType="addressbook.ecore#//AgeInt"/>
+    <genClasses ecoreClass="addressbook.ecore#//AddressBook">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference addressbook.ecore#//AddressBook/groups"/>
+    </genClasses>
+    <genClasses ecoreClass="addressbook.ecore#//Group">
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference addressbook.ecore#//Group/contacts"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Group/name"/>
+      <genFeatures property="None" notify="false" createChild="false" ecoreFeature="ecore:EReference addressbook.ecore#//Group/parent"/>
+      <genOperations ecoreOperation="addressbook.ecore#//Group/getContactName"/>
+    </genClasses>
+    <genClasses ecoreClass="addressbook.ecore#//Contact">
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Contact/name"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Contact/address"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Contact/contactType"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute addressbook.ecore#//Contact/age"/>
+    </genClasses>
+  </genPackages>
+</genmodel:GenModel>
