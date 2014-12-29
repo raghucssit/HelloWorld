@@ -187,7 +187,7 @@ public class AddressbookValidator extends EObjectValidator {
 	 * @see #validateAgeInt_Max
 	 */
 	public static final int AGE_INT__MAX__VALUE = 100;
-
+	//AddressbookValidator
 	/**
 	 * Validates the Max constraint of '<em>Age Int</em>'.
 	 * <!-- begin-user-doc -->
