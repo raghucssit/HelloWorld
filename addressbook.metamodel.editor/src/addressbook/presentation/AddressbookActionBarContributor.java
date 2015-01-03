@@ -101,6 +101,7 @@ public class AddressbookActionBarContributor
 			}
 
 			public void run() {
+				//refresh the active viewer.
 				if (activeEditorPart instanceof IViewerProvider) {
 					Viewer viewer = ((IViewerProvider)activeEditorPart).getViewer();
 					if (viewer != null) {
