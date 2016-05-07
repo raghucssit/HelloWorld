@@ -1,7 +1,7 @@
 # HelloWorld
 This is test sync branch.
 
-Modifying check confict1.
+Modifying check in out-of-test-sync
 
 This is eclipse emf example project.
 
