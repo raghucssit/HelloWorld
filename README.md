@@ -1,5 +1,7 @@
 # HelloWorld
-This is test sync branch
+This is test sync branch.
+
+Modifying locally to push.
 
 This is eclipse emf example project.
 
